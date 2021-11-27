@@ -12,16 +12,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="col-md-10 offset-md-1 mt-5">
-            <div class="jumbotron">
-                <h1 class="display-4">Users</h1>
-                <p class="lead">Users info</p>
-                <hr class="my-4">
-                {% block content %}
-                {% endblock content %}
-            </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'user_insert' %}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_insert' %}">Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_list' %}">Users List</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+    <div class="container">
+        <div class="container-fluid">
+            <h1 class="display-4">Users</h1>
+            <p class="lead">Users info</p>
+            <hr class="my-4">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

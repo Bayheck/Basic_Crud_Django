@@ -1,12 +1,17 @@
 from django.shortcuts import render, redirect
 from .models import Users
 from .form import UserForm
+from .filters import OrderFilter
 
 def user_list(request):
     users = Users.objects.all()
+    myFilter = OrderFilter(request.GET, queryset=users)
+    users = myFilter.qs
     context = {
-        'users': users
+        'users': users,
+        'myFilter':myFilter,
     }
+
     return render(request, "crud/crud_list.html", context)
 
 def user_form(request, email=''):

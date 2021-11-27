@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crud',
     'crispy_forms',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'django_filters',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
