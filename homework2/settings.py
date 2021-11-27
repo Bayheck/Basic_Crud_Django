@@ -85,15 +85,15 @@ WSGI_APPLICATION = 'homework2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hw2',
-        'USER': 'postgres',
-        'PASSWORD': 'adil1605',
-        'HOST': 'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'hw2',
+#         'USER': 'postgres',
+#         'PASSWORD': 'adil1605',
+#         'HOST': 'localhost'
+#     }
+# }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
