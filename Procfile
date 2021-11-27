@@ -1,1 +1,1 @@
-web : gunicorn homework2.wsgi
+web: gunicorn homework2.wsgi
